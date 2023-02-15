@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    background-color: #f9faff;
 }
 
 .main {
@@ -91,6 +92,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .box__pageviews {
@@ -103,22 +105,38 @@ body {
 }
 
 .box__price {
-    display: none;
+    position: absolute;
+    left: 50%;
+    top: 107px;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .box__price__num {
-    font-weight: 800;
-    font-size: 40px;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.8px;
+
+    /* font-size: 40px;
     line-height: 55px;
-    letter-spacing: -1px;
+    letter-spacing: -1px; */
+
+    font-weight: 800;
     color: #293356;
     margin-right: 8px;
 }
 
 .box__price__month {
+    font-size: 14px;
+    line-height: 19px;
+
+    /* font-size: 16px;
+    line-height: 22px; */
+
     font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
     color: #848ead;
 }
 
@@ -386,8 +404,23 @@ body {
     }
 
     .box__price {
-        display: flex;
         align-items: center;
+
+        position: revert;
+        left: revert;
+        top: revert;
+        transform: revert;
+    }
+
+    .box__price__num {
+        font-size: 40px;
+        line-height: 55px;
+        letter-spacing: -1px;
+    }
+
+    .box__price__month {
+        font-size: 16px;
+        line-height: 22px;
     }
 
     .box__range-wrapper {
